@@ -31,7 +31,9 @@ if __name__ == '__main__':
     ]
     for test in basic_tests:
         case, a, expected = test
-        print(f'{case} returns {row_sum_odd_numbers(a)}{", expected: {expected}" if row_sum_odd_numbers(a) != expected else ""}')
+        result = row_sum_odd_numbers(a)
+        print(f'{case} returns {result}'
+              f'{", expected: {expected}" if result != expected else ""}')
 
 
 #    _               _                          _   _

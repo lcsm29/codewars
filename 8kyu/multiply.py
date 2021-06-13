@@ -25,7 +25,9 @@ if __name__ == '__main__':
     ]
     for test in basic_tests:
         case, a, b, expected = test
-        print(f'{case} returns {multiply(a, b)}{", expected: {expected}" if multiply(a, b) != expected else ""}')
+        result = multiply(a, b)
+        print(f'{case} returns {result}'
+              f'{", expected: {expected}" if result != expected else ""}')
 
 
 #    _               _                          _   _
