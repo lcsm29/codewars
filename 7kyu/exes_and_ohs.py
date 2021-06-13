@@ -13,3 +13,18 @@
 def xo(s):
     tmp = [c.lower() for c in s if c.lower() in 'x, o']
     return tmp.count('x') == tmp.count('o')
+
+
+#    _               _                          _   _
+#   | |             | |                        | | (_)
+#   | |__   ___  ___| |_   _ __  _ __ __ _  ___| |_ _  ___ ___
+#   | '_ \ / _ \/ __| __| | '_ \| '__/ _` |/ __| __| |/ __/ _ \
+#   | |_) |  __/\__ \ |_  | |_) | | | (_| | (__| |_| | (_|  __/
+#   |_.__/ \___||___/\__| | .__/|_|  \__,_|\___|\__|_|\___\___|
+#                         | |  written by
+#                         |_|  https://codewars.com/users/Beast
+'''Beast
+def xo(s):
+    s = s.lower()
+    return s.count('x') == s.count('o')
+'''
