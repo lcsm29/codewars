@@ -55,7 +55,7 @@ nextBigger(num: 531) # returns -1
 ```
 
 ## parseInt() reloaded
-[kata](https://www.codewars.com/kata/525c7c5ab6aecef16e0001a5) | Solutions: [Python](https://github.com/lcsm29/codewars/blob/main/4kyu/parseInt()_reloaded.py)
+[kata](https://www.codewars.com/kata/525c7c5ab6aecef16e0001a5) | Solutions: [Python](https://github.com/lcsm29/codewars/blob/main/4kyu/parseint_reloaded.py)
 
 In this kata we want to convert a string into an integer. The strings simply represent the numbers in words.
 
