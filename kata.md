@@ -3,6 +3,7 @@
   * [Next bigger number with the same digits](#next-bigger-number-with-the-same-digits)
   * [parseInt() reloaded](#parseint-reloaded)
   * [Permutations](#permutations)
+  * [Simplifying multilinear polynomials](#simplifying-multilinear-polynomials)
   * [Snail](#snail)
   * [Sort binary tree by levels](#sort-binary-tree-by-levels)
   * [Sum of Intervals](#sum-of-intervals)
@@ -81,6 +82,31 @@ permutations('ab')  # ['ab', 'ba']
 permutations('aabb')  # ['aabb', 'abab', 'abba', 'baab', 'baba', 'bbaa']
 ```
 The order of the permutations doesn't matter.
+
+## Simplifying multilinear polynomials
+[kata](https://www.codewars.com/kata/55f89832ac9a66518f000118) | Solutions: [Python](https://github.com/lcsm29/codewars/blob/main/4kyu/simplifying_multilinear_polynomials.py)
+
+When we attended middle school were asked to simplify mathematical expressions like "3x-yx+2xy-x" (or usually bigger), and that was easy-peasy ("2x+xy"). But tell that to your pc and we'll see!
+
+Write a function: `simplify`, that takes a string in input, representing a multilinear non-constant polynomial in integers coefficients (like `"3x-zx+2xy-x"`), and returns another string as output where the same expression has been simplified in the following way ( `->` means application of `simplify`):
+
+* All possible sums and subtraction of equivalent monomials ("xy==yx") has been done, e.g.:
+  * `"cb+cba" -> "bc+abc"`, `"2xy-yx" -> "xy"`, `"-a+5ab+3a-c-2a" -> "-c+5ab"`
+
+* All monomials appears in order of increasing number of variables, e.g.:
+  * `"-abc+3a+2ac" -> "3a+2ac-abc"`, `"xyz-xz" -> "-xz+xyz"`
+
+* If two monomials have the same number of variables, they appears in [lexicographic order](https://en.wikipedia.org/wiki/Lexicographic_order), e.g.:
+  * `"a+ca-ab" -> "a-ab+ac"`, `"xzy+zby" -> "byz+xyz"`
+
+* There is no leading `+` sign if the first coefficient is positive, e.g.:
+  * `"-y+x" -> "x-y"`, but no restrictions for `-`: `"y-x" -> "-x+y"`
+
+**N.B.** to keep it simplest, the string in input is restricted to represent only multilinear non-constant polynomials, so you won't find something like `-3+yx^2'. **Multilinear** means in this context: of **degree 1 on each variable**.
+
+**Warning**: the string in input can contain arbitrary variables represented by lowercase characters in the english alphabet.
+
+**Good Work :)**
 
 ## Snail
 [kata](https://www.codewars.com/kata/521c2db8ddc89b9b7a0000c1) | Solutions: [Python](https://github.com/lcsm29/codewars/blob/main/4kyu/snail.py)
