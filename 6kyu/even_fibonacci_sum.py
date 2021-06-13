@@ -20,3 +20,23 @@ def even_fib(m):
             return sum_even
         if b % 2 == 0:
             sum_even += b
+
+
+#    _               _                          _   _
+#   | |             | |                        | | (_)
+#   | |__   ___  ___| |_   _ __  _ __ __ _  ___| |_ _  ___ ___
+#   | '_ \ / _ \/ __| __| | '_ \| '__/ _` |/ __| __| |/ __/ _ \
+#   | |_) |  __/\__ \ |_  | |_) | | | (_| | (__| |_| | (_|  __/
+#   |_.__/ \___||___/\__| | .__/|_|  \__,_|\___|\__|_|\___\___|
+#                         | |  written by
+#                         |_|  https://codewars.com/users/BartBee
+'''BartBee
+def even_fib(m):
+    x,y = 0, 1
+    counter = 0
+    while y < m:
+        if y % 2 == 0:
+            counter += y
+        x,y = y, x+ y
+    return counter
+'''
