@@ -17,9 +17,35 @@ def snail(a):
         d = [[i, limit] for i in range(start, limit)]
         l = [[limit, i] for i in range(limit, start, -1)]
         u = [[i, start] for i in range(limit, start, -1)]
-        for l in r + d + l + u:
-            pos.append([l[0], l[1]])
+        for position in r + d + l + u:
+            pos.append([position[0], position[1]])
         start, limit = start + 1, limit - 1
         if start == limit:
             pos.append([start, limit])
     return [a[p[0]][p[1]] for p in pos] if len(pos) != 0 else a[0] if type(a[0]) == list else a
+
+
+#    _               _                          _   _
+#   | |             | |                        | | (_)
+#   | |__   ___  ___| |_   _ __  _ __ __ _  ___| |_ _  ___ ___
+#   | '_ \ / _ \/ __| __| | '_ \| '__/ _` |/ __| __| |/ __/ _ \
+#   | |_) |  __/\__ \ |_  | |_) | | | (_| | (__| |_| | (_|  __/
+#   |_.__/ \___||___/\__| | .__/|_|  \__,_|\___|\__|_|\___\___|
+#                         | |  written by
+#                         |_|  https://codewars.com/users/jolaf
+'''jolaf
+def snail(array):
+    ret = []
+    if array and array[0]:
+        size = len(array)
+        for n in xrange((size + 1) // 2):
+            for x in xrange(n, size - n):
+                ret.append(array[n][x])
+            for y in xrange(1 + n, size - n):
+                ret.append(array[y][-1 - n])
+            for x in xrange(2 + n, size - n + 1):
+                ret.append(array[-1 - n][-x])
+            for y in xrange(2 + n, size - n):
+                ret.append(array[-y][n])
+    return ret
+'''
