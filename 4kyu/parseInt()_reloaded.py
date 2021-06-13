@@ -29,3 +29,27 @@ def parse_int(string):
                     total = total * d.get(i) if 'hund' in i else total + d.get(i)
         a.append(total)
     return 1000000 if 'million' in string else a[0] * 1000 + a[1] if len(a) > 1 else a[0]
+
+
+#    _               _                          _   _
+#   | |             | |                        | | (_)
+#   | |__   ___  ___| |_   _ __  _ __ __ _  ___| |_ _  ___ ___
+#   | '_ \ / _ \/ __| __| | '_ \| '__/ _` |/ __| __| |/ __/ _ \
+#   | |_) |  __/\__ \ |_  | |_) | | | (_| | (__| |_| | (_|  __/
+#   |_.__/ \___||___/\__| | .__/|_|  \__,_|\___|\__|_|\___\___|
+#                         | |  written by
+#                         |_|  https://codewars.com/users/lechevalier
+'''lechevalier
+words = {w: n for n, w in enumerate('zero one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen'.split())}
+words.update({w: 10 * n for n, w in enumerate('twenty thirty forty fifty sixty seventy eighty ninety hundred'.split(), 2)})
+thousands = {w: 1000 ** n for n, w in enumerate('thousand million billion trillion quadrillion quintillion sextillion septillion octillion nonillion decillion'.split(), 1)}
+def parse_int(strng):
+    num = group = 0
+    for w in strng.replace(' and ', ' ').replace('-', ' ').split():
+        if w == 'hundred': group *= words[w]
+        elif w in words: group += words[w]
+        else:
+            num += group * thousands[w]
+            group = 0
+    return num + group
+'''
