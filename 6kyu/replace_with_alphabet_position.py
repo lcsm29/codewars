@@ -16,3 +16,17 @@ from string import punctuation as p, ascii_lowercase as lo
 def alphabet_position(text):
     d = {c: i+1 for i, c in enumerate(lo)}
     return ' '.join([str(d[c.lower()]) for w in text.split() for c in w.strip(p) if c.encode().isalpha()])
+
+
+#    _               _                          _   _
+#   | |             | |                        | | (_)
+#   | |__   ___  ___| |_   _ __  _ __ __ _  ___| |_ _  ___ ___
+#   | '_ \ / _ \/ __| __| | '_ \| '__/ _` |/ __| __| |/ __/ _ \
+#   | |_) |  __/\__ \ |_  | |_) | | | (_| | (__| |_| | (_|  __/
+#   |_.__/ \___||___/\__| | .__/|_|  \__,_|\___|\__|_|\___\___|
+#                         | |  written by
+#                         |_|  https://codewars.com/users/laoris
+'''laoris
+def alphabet_position(text):
+    return ' '.join(str(ord(c) - 96) for c in text.lower() if c.isalpha())
+'''
