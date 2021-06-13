@@ -12,7 +12,7 @@
 #   o888o `Y8bod8P' 8""888P' o888o o888o o888o 8888888888   .oP'
 def dig_pow(n, p):
     tmp = [int(c) ** (p + i) for i, c in enumerate(str(n))]
-    return sum(tmp) / n if sum(tmp) % n == 0 else -1
+    return sum(tmp) // n if sum(tmp) % n == 0 else -1
 
 
 #    _               _                          _   _
