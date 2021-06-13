@@ -23,6 +23,7 @@
   * [Disemvowel Trolls](#disemvowel-trolls)
   * [Exes and Ohs](#exes-and-ohs)
   * [Largest 5 digit number in a series](#largest-5-digit-number-in-a-series)
+  * [Sum of odd numbers](#sum-of-odd-numbers)
 - [8 kyu](#8-kyu)
   * [Multiply](#multiply)
 
@@ -417,6 +418,23 @@ In the following 10 digit number:
 Complete the solution so that it returns the greatest sequence of five consecutive digits found within the number given. The number will be passed in as a string of only digits. It should return a five digit integer. The number passed may be as large as 1000 digits.
 
 Adapted from [ProjectEuler.net](https://projecteuler.net/)
+
+## Sum of odd numbers
+[kata](https://www.codewars.com/kata/55fd2d567d94ac3bc9000064) | Solutions: [Python](https://github.com/lcsm29/codewars/blob/main/7kyu/sum_of_odd_numbers.py)
+
+Given the triangle of consecutive odd numbers:
+```
+             1
+          3     5
+       7     9    11
+   13    15    17    19
+21    23    25    27    29
+```
+Calculate the sum of the numbers in the nth row of this triangle (starting at index 1) e.g.:
+```python:
+row_sum_odd_numbers(1)  # 1
+row_sum_odd_numbers(2)  # 3 + 5 = 8
+```
 
 # 8 kyu
 ## Multiply
