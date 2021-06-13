@@ -15,3 +15,17 @@ def descending_order(n):
     for i in str(n):
         d[i] += 1
     return int(''.join([k * v for k, v in reversed(d.items())]))
+
+
+#    _               _                          _   _
+#   | |             | |                        | | (_)
+#   | |__   ___  ___| |_   _ __  _ __ __ _  ___| |_ _  ___ ___
+#   | '_ \ / _ \/ __| __| | '_ \| '__/ _` |/ __| __| |/ __/ _ \
+#   | |_) |  __/\__ \ |_  | |_) | | | (_| | (__| |_| | (_|  __/
+#   |_.__/ \___||___/\__| | .__/|_|  \__,_|\___|\__|_|\___\___|
+#                         | |  written by
+#                         |_|  https://codewars.com/users/hiasen
+'''hiasen
+def Descending_Order(num):
+    return int("".join(sorted(str(num), reverse=True)))
+'''
