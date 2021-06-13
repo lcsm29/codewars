@@ -20,3 +20,27 @@ def next_bigger(n):
     n[l], n[k - 1] = n[k - 1], n[l]
     n[k:] = reversed(n[k:])
     return int(''.join([str(i) for i in n]))
+
+                     
+#    _               _                          _   _
+#   | |             | |                        | | (_)
+#   | |__   ___  ___| |_   _ __  _ __ __ _  ___| |_ _  ___ ___
+#   | '_ \ / _ \/ __| __| | '_ \| '__/ _` |/ __| __| |/ __/ _ \
+#   | |_) |  __/\__ \ |_  | |_) | | | (_| | (__| |_| | (_|  __/
+#   |_.__/ \___||___/\__| | .__/|_|  \__,_|\___|\__|_|\___\___|
+#                         | |  written by
+#                         |_|  https://codewars.com/users/zed9h
+'''zed9h
+import itertools
+def next_bigger(n):
+    s = list(str(n))
+    for i in range(len(s)-2,-1,-1):
+        if s[i] < s[i+1]:
+            t = s[i:]
+            m = min(filter(lambda x: x>t[0], t))
+            t.remove(m)
+            t.sort()
+            s[i:] = [m] + t
+            return int("".join(s))
+    return -1
+'''
