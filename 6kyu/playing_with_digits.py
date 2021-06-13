@@ -13,3 +13,20 @@
 def dig_pow(n, p):
     tmp = [int(c) ** (p + i) for i, c in enumerate(str(n))]
     return sum(tmp) / n if sum(tmp) % n == 0 else -1
+
+
+#    _               _                          _   _
+#   | |             | |                        | | (_)
+#   | |__   ___  ___| |_   _ __  _ __ __ _  ___| |_ _  ___ ___
+#   | '_ \ / _ \/ __| __| | '_ \| '__/ _` |/ __| __| |/ __/ _ \
+#   | |_) |  __/\__ \ |_  | |_) | | | (_| | (__| |_| | (_|  __/
+#   |_.__/ \___||___/\__| | .__/|_|  \__,_|\___|\__|_|\___\___|
+#                         | |  written by
+#                         |_|  https://codewars.com/users/tpatja
+'''tpatja
+def dig_pow(n, p):
+  s = 0
+  for i,c in enumerate(str(n)):
+     s += pow(int(c),p+i)
+  return s/n if s%n==0 else -1
+'''
