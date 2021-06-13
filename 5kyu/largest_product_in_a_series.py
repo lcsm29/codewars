@@ -19,3 +19,22 @@ def greatest_product(n):
             prd *= int(c)
         ans = max(ans, prd)
     return ans  
+
+
+#    _               _                          _   _
+#   | |             | |                        | | (_)
+#   | |__   ___  ___| |_   _ __  _ __ __ _  ___| |_ _  ___ ___
+#   | '_ \ / _ \/ __| __| | '_ \| '__/ _` |/ __| __| |/ __/ _ \
+#   | |_) |  __/\__ \ |_  | |_) | | | (_| | (__| |_| | (_|  __/
+#   |_.__/ \___||___/\__| | .__/|_|  \__,_|\___|\__|_|\___\___|
+#                         | |  written by
+#                         |_|  https://codewars.com/users/ZigiZigiBubzi
+'''ZigiZigiBubzi
+from itertools import islice
+from functools import reduce
+
+def greatest_product(n):
+    numbers=[int(value) for value in n]
+    result=[reduce(lambda x,y: x*y, islice(numbers, i, i+5), 1) for i in range(len(numbers)-4)]
+    return max(result) 
+'''
