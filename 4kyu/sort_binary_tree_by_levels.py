@@ -21,3 +21,30 @@ def tree_by_levels(node):
                 answer.append(tmp.value)
                 queue += [tmp.left, tmp.right]
         return answer
+
+
+#    _               _                          _   _
+#   | |             | |                        | | (_)
+#   | |__   ___  ___| |_   _ __  _ __ __ _  ___| |_ _  ___ ___
+#   | '_ \ / _ \/ __| __| | '_ \| '__/ _` |/ __| __| |/ __/ _ \
+#   | |_) |  __/\__ \ |_  | |_) | | | (_| | (__| |_| | (_|  __/
+#   |_.__/ \___||___/\__| | .__/|_|  \__,_|\___|\__|_|\___\___|
+#                         | |  written by
+#                         |_|  https://codewars.com/users/suic
+'''suic
+from collections import deque
+
+
+def tree_by_levels(node):
+    if not node:
+        return []
+    res, queue = [], deque([node,])
+    while queue:
+        n = queue.popleft()
+        res.append(n.value)
+        if n.left is not None:
+            queue.append(n.left)
+        if n.right is not None:
+            queue.append(n.right)
+    return res
+'''
