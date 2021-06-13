@@ -16,7 +16,7 @@ def tree_by_levels(node):
     else:
         answer, queue = [], [node]
         while queue:
-            tmp = node.pop(0)
+            tmp = queue.pop(0)
             if tmp is not None:
                 answer.append(tmp.value)
                 queue += [tmp.left, tmp.right]
