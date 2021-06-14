@@ -21,6 +21,20 @@ def greatest_product(n):
     return ans  
 
 
+if __name__ == '__main__':
+    basic_tests = [
+        ['greatest_product', "123834539327238239583", 3_240],
+        ['greatest_product', "395831238345393272382", 3_240],
+        ['greatest_product', "92494737828244222221111111532909999", 5_292],
+        ['greatest_product', "02494037820244202221011110532909999", 0]
+    ]
+    for test in basic_tests:
+        fn_name, n, expected = test
+        result = globals()[fn_name](n)
+        print(f'{fn_name}("{n}") returns {result}'
+              f'{f", expected: {expected}" if result != expected else ""}')
+
+
 #    _               _                          _   _
 #   | |             | |                        | | (_)
 #   | |__   ___  ___| |_   _ __  _ __ __ _  ___| |_ _  ___ ___
