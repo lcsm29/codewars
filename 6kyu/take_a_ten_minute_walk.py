@@ -31,6 +31,20 @@ def is_valid_walk(copied):
     return True if pos == [10, 10] and len(cp) == 10 else False
 
 
+if __name__ == '__main__':
+    basic_tests = [
+        ['is_valid_walk', ['n','s','n','s','n','s','n','s','n','s'], True],
+        ['is_valid_walk', ['w','e','w','e','w','e','w','e','w','e','w','e'], False],
+        ['is_valid_walk', ['w'], False],
+        ['is_valid_walk', ['n','n','n','s','n','s','n','s','n','s'], False]
+    ]
+    for test in basic_tests:
+        fn_name, walk, expected = test
+        result = globals()[fn_name](walk)
+        print(f'{fn_name}({walk}) returns {result}'
+              f'{f", expected: {expected}" if result != expected else ""}')
+
+
 #    _               _                          _   _
 #   | |             | |                        | | (_)
 #   | |__   ___  ___| |_   _ __  _ __ __ _  ___| |_ _  ___ ___
