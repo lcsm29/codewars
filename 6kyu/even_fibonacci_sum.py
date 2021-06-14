@@ -22,6 +22,19 @@ def even_fib(m):
             sum_even += b
 
 
+if __name__ == '__main__':
+    basic_tests = [
+        ['even_fib', 1, 0],
+        ['even_fib', 10, 10],
+        ['even_fib', 5, 2],
+    ]
+    for test in basic_tests:
+        fn_name, m, expected = test
+        result = globals()[fn_name](m)
+        print(f'{fn_name}({m}) returns {result}'
+              f'{f", expected: {expected}" if result != expected else ""}')
+
+
 #    _               _                          _   _
 #   | |             | |                        | | (_)
 #   | |__   ___  ___| |_   _ __  _ __ __ _  ___| |_ _  ___ ___
