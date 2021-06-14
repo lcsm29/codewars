@@ -54,6 +54,25 @@ def simplify(poly):
     return final_expression
 
 
+if __name__ == '__main__':
+    basic_tests = [
+        ['simplify', "dc+dcba", "cd+abcd"],  # Test reduction by equivalence
+        ['simplify', "2xy-yx", "xy"],
+        ['simplify', "-a+5ab+3a-c-2a", "-c+5ab"],
+        ['simplify', "-abc+3a+2ac", "3a+2ac-abc"],  # Test monomial length ordering
+        ['simplify', "xyz-xz", "-xz+xyz"],
+        ['simplify', "a+ca-ab", "a-ab+ac"],  # Test lexicographic ordering
+        ['simplify', "xzy+zby", "byz+xyz"],
+        ['simplify', "-y+x", "x-y"],  # Test no leading +
+        ['simplify', "y-x", "-x+y"]
+    ]
+    for test in basic_tests:
+        fn_name, poly, expected = test
+        result = globals()[fn_name](poly)
+        print(f'{fn_name}("{poly}") returns "{result}"'
+              f'{f", expected: {expected}" if result != expected else ""}')
+
+
 #    _               _                          _   _
 #   | |             | |                        | | (_)
 #   | |__   ___  ___| |_   _ __  _ __ __ _  ___| |_ _  ___ ___
