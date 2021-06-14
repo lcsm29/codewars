@@ -31,6 +31,19 @@ def parse_int(string):
     return 1000000 if 'million' in string else a[0] * 1000 + a[1] if len(a) > 1 else a[0]
 
 
+if __name__ == '__main__':
+    basic_tests = [
+        ['parse_int', "one", 1],
+        ['parse_int', "twenty", 20],
+        ['parse_int', "two hundred forty-six", 246]
+    ]
+    for test in basic_tests:
+        fn_name, string, expected = test
+        result = globals()[fn_name](string)
+        print(f'{fn_name}("{string}") returns {result}'
+              f'{f", expected: {expected}" if result != expected else ""}')
+
+
 #    _               _                          _   _
 #   | |             | |                        | | (_)
 #   | |__   ___  ___| |_   _ __  _ __ __ _  ___| |_ _  ___ ___
