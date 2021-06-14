@@ -26,14 +26,14 @@ def row_sum_odd_numbers(n: int) -> int:
 
 if __name__ == '__main__':
     basic_tests = [
-        ['row_sum_odd_numbers(1)', 1, 1],
-        ['row_sum_odd_numbers(1)', 42, 74_088]
+        ['row_sum_odd_numbers', 1, 1],
+        ['row_sum_odd_numbers', 42, 74_088]
     ]
     for test in basic_tests:
-        case, a, expected = test
-        result = row_sum_odd_numbers(a)
-        print(f'{case} returns {result}'
-              f'{", expected: {expected}" if result != expected else ""}')
+        fn_name, n, expected = test
+        result = globals()[fn_name](n)
+        print(f'{fn_name}({n}) returns {result}'
+              f'{f", expected: {expected}" if result != expected else ""}')
 
 
 #    _               _                          _   _
