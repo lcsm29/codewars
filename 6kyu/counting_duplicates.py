@@ -14,6 +14,21 @@ def duplicate_count(text):
     return len([c for c in set(text.lower()) if text.lower().count(c) > 1])
 
 
+if __name__ == '__main__':
+    basic_tests = [
+        ['duplicate_count', "", 0],
+        ['duplicate_count', "abcde", 0],
+        ['duplicate_count', "abcdeaa", 1],
+        ['duplicate_count', "abcdeaB", 2],
+        ['duplicate_count', "Indivisibilities", 2]
+    ]
+    for test in basic_tests:
+        fn_name, text, expected = test
+        result = globals()[fn_name](text)
+        print(f'{fn_name}("{text}") returns {result}'
+              f'{f", expected: {expected}" if result != expected else ""}')
+
+
 #    _               _                          _   _
 #   | |             | |                        | | (_)
 #   | |__   ___  ___| |_   _ __  _ __ __ _  ___| |_ _  ___ ___
