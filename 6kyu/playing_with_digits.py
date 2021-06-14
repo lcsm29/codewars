@@ -15,6 +15,19 @@ def dig_pow(n, p):
     return sum(tmp) // n if sum(tmp) % n == 0 else -1
 
 
+if __name__ == '__main__':
+    basic_tests = [
+        ['dig_pow', 89, 1, 1],
+        ['dig_pow', 92, 1, -1],
+        ['dig_pow', 46_288, 3, 51]
+    ]
+    for test in basic_tests:
+        fn_name, n, p, expected = test
+        result = globals()[fn_name](n, p)
+        print(f'{fn_name}({n}, {p}) returns {result}'
+              f'{f", expected: {expected}" if result != expected else ""}')
+
+
 #    _               _                          _   _
 #   | |             | |                        | | (_)
 #   | |__   ___  ___| |_   _ __  _ __ __ _  ___| |_ _  ___ ___
