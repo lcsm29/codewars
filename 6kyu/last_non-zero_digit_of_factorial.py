@@ -15,6 +15,22 @@ def last_digit(n):
     return l[n] if len(str(n)) == 1 else last_digit(a) * l[b] * 6 % 10 if c == 0 else last_digit(a) * l[b] * 4 % 10
 
 
+if __name__ == '__main__':
+    basic_tests = [
+        ['last_digit', 3, 6],
+        ['last_digit', 99, 4],
+        ['last_digit', 12, 6],
+        ['last_digit', 387, 2],
+        ['last_digit', 1673, 4],
+        ['last_digit', 10_000, 8]
+    ]
+    for test in basic_tests:
+        fn_name, n, expected = test
+        result = globals()[fn_name](n)
+        print(f'{fn_name}({n}) returns {result}'
+              f'{f", expected: {expected}" if result != expected else ""}')
+
+
 #    _               _                          _   _
 #   | |             | |                        | | (_)
 #   | |__   ___  ___| |_   _ __  _ __ __ _  ___| |_ _  ___ ___
