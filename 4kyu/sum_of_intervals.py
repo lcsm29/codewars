@@ -14,6 +14,20 @@ def sum_of_intervals(intervals):
     return len(set([i for a, b in intervals for i in range(a, b)]))
 
 
+if __name__ == '__main__':
+    basic_tests = [
+        ['sum_of_intervals', [(1, 5)], 4],
+        ['sum_of_intervals', [(1, 5), (6, 10)], 8],
+        ['sum_of_intervals', [(1, 5), (1, 5)], 4],
+        ['sum_of_intervals', [(1, 4), (7, 10), (3, 5)], 7]
+    ]
+    for test in basic_tests:
+        fn_name, intervals, expected = test
+        result = globals()[fn_name](intervals)
+        print(f'{fn_name}({intervals}) returns {result}'
+              f'{f", expected: {expected}" if result != expected else ""}')
+
+
 #    _               _                          _   _
 #   | |             | |                        | | (_)
 #   | |__   ___  ___| |_   _ __  _ __ __ _  ___| |_ _  ___ ___
