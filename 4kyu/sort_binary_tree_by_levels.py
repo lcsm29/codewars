@@ -23,6 +23,23 @@ def tree_by_levels(node):
         return answer
 
 
+if __name__ == '__main__':
+    class Node:
+        def __init__(self, L, R, n):
+            self.left = L
+            self.right = R
+            self.value = n
+    basic_tests = [
+        ['tree_by_levels', None, [], 'None'],
+        ['tree_by_levels', Node(Node(None, Node(None, None, 4), 2), Node(Node(None, None, 5), Node(None, None, 6), 3), 1), [1, 2, 3, 4, 5, 6], 'Node(Node(None, Node(None, None, 4), 2), Node(Node(None, None, 5), Node(None, None, 6), 3), 1)']
+    ]
+    for test in basic_tests:
+        fn_name, node, expected, str_node = test
+        result = globals()[fn_name](node)
+        print(f'{fn_name}({str_node}) returns {result}'
+              f'{f", expected: {expected}" if result != expected else ""}')
+
+
 #    _               _                          _   _
 #   | |             | |                        | | (_)
 #   | |__   ___  ___| |_   _ __  _ __ __ _  ___| |_ _  ___ ___
