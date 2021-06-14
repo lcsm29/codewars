@@ -17,6 +17,19 @@ def descending_order(n):
     return int(''.join([k * v for k, v in reversed(d.items())]))
 
 
+if __name__ == '__main__':
+    basic_tests = [
+        ["descending_order(0)", 0, 0],
+        ["descending_order(15)", 15, 51],
+        ["descending_order(123456789)", 123456789, 987654321]
+    ]
+    for test in basic_tests:
+        case, n, expected = test
+        result = descending_order(n)
+        print(f'{case} returns {result}'
+              f'{f", expected: {expected}" if result != expected else ""}')
+
+
 #    _               _                          _   _
 #   | |             | |                        | | (_)
 #   | |__   ___  ___| |_   _ __  _ __ __ _  ___| |_ _  ___ ___
