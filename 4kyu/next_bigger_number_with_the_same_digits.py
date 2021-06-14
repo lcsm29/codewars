@@ -21,7 +21,22 @@ def next_bigger(n):
     n[k:] = reversed(n[k:])
     return int(''.join([str(i) for i in n]))
 
-                     
+
+if __name__ == '__main__':
+    basic_tests = [
+        ['next_bigger', 12, 21],
+        ['next_bigger', 513, 531],
+        ['next_bigger', 2017, 2071],
+        ['next_bigger', 414, 441],
+        ['next_bigger', 144, 414]
+    ]
+    for test in basic_tests:
+        fn_name, n, expected = test
+        result = globals()[fn_name](n)
+        print(f'{fn_name}({n}) returns {result}'
+              f'{f", expected: {expected}" if result != expected else ""}')
+
+
 #    _               _                          _   _
 #   | |             | |                        | | (_)
 #   | |__   ___  ___| |_   _ __  _ __ __ _  ___| |_ _  ___ ___
