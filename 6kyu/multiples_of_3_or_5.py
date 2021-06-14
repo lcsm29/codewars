@@ -20,6 +20,17 @@ def solution(number):
     return gauss_sum(3) + gauss_sum(5) - gauss_sum(15)
 
 
+if __name__ == '__main__':
+    basic_tests = [
+        ['solution', 10, 23]
+    ]
+    for test in basic_tests:
+        fn_name, number, expected = test
+        result = globals()[fn_name](number)
+        print(f'{fn_name}({number}) returns {result}'
+              f'{f", expected: {expected}" if result != expected else ""}')
+
+
 #    _               _                          _   _
 #   | |             | |                        | | (_)
 #   | |__   ___  ___| |_   _ __  _ __ __ _  ___| |_ _  ___ ___
