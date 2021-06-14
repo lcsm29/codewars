@@ -25,6 +25,26 @@ def snail(a):
     return [a[p[0]][p[1]] for p in pos] if len(pos) != 0 else a[0] if type(a[0]) == list else a
 
 
+if __name__ == '__main__':
+    basic_tests = [
+        ['snail', [[1,2,3],
+                   [4,5,6],
+                   [7,8,9]],
+            [1,2,3,6,9,8,7,4,5]
+        ],
+        ['snail', [[1,2,3],
+                   [8,9,4],
+                   [7,6,5]],
+            [1,2,3,4,5,6,7,8,9]
+        ]
+    ]
+    for test in basic_tests:
+        fn_name, a, expected = test
+        result = globals()[fn_name](a)
+        print(f'{fn_name}({a}) returns {result}'
+              f'{f", expected: {expected}" if result != expected else ""}')
+
+
 #    _               _                          _   _
 #   | |             | |                        | | (_)
 #   | |__   ___  ___| |_   _ __  _ __ __ _  ___| |_ _  ___ ___
