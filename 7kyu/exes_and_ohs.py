@@ -15,6 +15,19 @@ def xo(s):
     return tmp.count('x') == tmp.count('o')
 
 
+if __name__ == '__main__':
+    basic_tests = [
+        ["xo", 'xo', True],
+        ["xo", 'xo0', True],
+        ["xo", 'xxxoo', False]
+    ]
+    for test in basic_tests:
+        fn_name, s, expected = test
+        result = globals()[fn_name](s)
+        print(f'{fn_name}("{s}") returns {result}'
+              f'{f", expected: {expected}" if result != expected else ""}')
+
+
 #    _               _                          _   _
 #   | |             | |                        | | (_)
 #   | |__   ___  ___| |_   _ __  _ __ __ _  ___| |_ _  ___ ___
