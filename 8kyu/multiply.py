@@ -16,18 +16,18 @@ def multiply(a, b):
 
 if __name__ == '__main__':
     basic_tests = [
-        ['multiply(1, 1)', 1, 1, 1],
-        ['multiply(2, 2)', 2, 2, 4],
-        ['multiply(3, 5)', 3, 5, 15],
-        ['multiply(1.5, 2.5)', 1.5, 2.5, 3.75],
-        ['multiply(0, 5)', 0, 5, 0],
-        ['multiply(0, 0)', 0, 0, 0]
+        ['multiply', 1, 1, 1],
+        ['multiply', 2, 2, 4],
+        ['multiply', 3, 5, 15],
+        ['multiply', 1.5, 2.5, 3.75],
+        ['multiply', 0, 5, 0],
+        ['multiply', 0, 0, 0]
     ]
     for test in basic_tests:
-        case, a, b, expected = test
-        result = multiply(a, b)
-        print(f'{case} returns {result}'
-              f'{", expected: {expected}" if result != expected else ""}')
+        fn_name, a, b, expected = test
+        result = globals()[fn_name](a, b)
+        print(f'{fn_name}({a}, {b}) returns {result}'
+              f'{f", expected: {expected}" if result != expected else ""}')
 
 
 #    _               _                          _   _
