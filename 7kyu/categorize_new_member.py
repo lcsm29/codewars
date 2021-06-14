@@ -14,6 +14,18 @@ def open_or_senior(data):
     return ['Senior' if l[0] >= 55 and l[1] > 7 else 'Open' for l in data]
 
 
+if __name__ == '__main__':
+    basic_tests = [
+        ["open_or_senior", [(45, 12),(55,21),(19, -2),(104, 20)], ['Open', 'Senior', 'Open', 'Senior']],
+        ["open_or_senior", [(16, 23),(73,1),(56, 20),(1, -1)], ['Open', 'Open', 'Senior', 'Open']]
+    ]
+    for test in basic_tests:
+        fn_name, data, expected = test
+        result = globals()[fn_name](data)
+        print(f'{fn_name}({data}) returns {result}'
+              f'{f", expected: {expected}" if result != expected else ""}')
+
+
 #    _               _                          _   _
 #   | |             | |                        | | (_)
 #   | |__   ___  ___| |_   _ __  _ __ __ _  ___| |_ _  ___ ___
