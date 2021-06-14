@@ -14,6 +14,17 @@ def disemvowel(s):
     return ''.join([c for c in s if c.lower() not in 'aieou'])
 
 
+if __name__ == '__main__':
+    basic_tests = [
+        ["disemvowel", 'This website is for losers LOL!', 'Ths wbst s fr lsrs LL!']
+    ]
+    for test in basic_tests:
+        fn_name, s, expected = test
+        result = globals()[fn_name](s)
+        print(f'{fn_name}("{s}") returns "{result}"'
+              f'{f", expected: {expected}" if result != expected else ""}')
+
+
 #    _               _                          _   _
 #   | |             | |                        | | (_)
 #   | |__   ___  ___| |_   _ __  _ __ __ _  ___| |_ _  ___ ___
