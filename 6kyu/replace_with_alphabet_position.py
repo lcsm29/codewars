@@ -18,6 +18,18 @@ def alphabet_position(text):
     return ' '.join([str(d[c.lower()]) for w in text.split() for c in w.strip(p) if c.encode().isalpha()])
 
 
+if __name__ == '__main__':
+    basic_tests = [
+        ['alphabet_position', "The sunset sets at twelve o' clock.", "20 8 5 19 21 14 19 5 20 19 5 20 19 1 20 20 23 5 12 22 5 15 3 12 15 3 11"],
+        ['alphabet_position', "The narwhal bacons at midnight.", "20 8 5 14 1 18 23 8 1 12 2 1 3 15 14 19 1 20 13 9 4 14 9 7 8 20"]
+    ]
+    for test in basic_tests:
+        fn_name, text, expected = test
+        result = globals()[fn_name](text)
+        print(f'{fn_name}("{text}") returns "{result}"'
+              f'{f", expected: {expected}" if result != expected else ""}')
+
+
 #    _               _                          _   _
 #   | |             | |                        | | (_)
 #   | |__   ___  ___| |_   _ __  _ __ __ _  ___| |_ _  ___ ___
