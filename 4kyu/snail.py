@@ -10,7 +10,7 @@
 #    888  888       `"Y88b.   888   888   888    .dP'           888'
 #    888  888   .o8 o.  )88b  888   888   888  .oP     .o     .88P'
 #   o888o `Y8bod8P' 8""888P' o888o o888o o888o 8888888888   .oP'
-def snail(a):
+def snail(a: list[int]) -> list[int]:
     pos, start, limit = [], 0, len(a) - 1
     while limit:
         r = [[start, i] for i in range(start, limit)]
