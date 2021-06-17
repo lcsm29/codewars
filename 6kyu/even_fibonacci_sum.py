@@ -10,7 +10,7 @@
 #    888  888       `"Y88b.   888   888   888    .dP'           888'
 #    888  888   .o8 o.  )88b  888   888   888  .oP     .o     .88P'
 #   o888o `Y8bod8P' 8""888P' o888o o888o o888o 8888888888   .oP'
-def even_fib(m):
+def even_fib(m: int) -> int:
     if m <= 2: return 0
     a, b = 1, 2
     sum_even = 2
