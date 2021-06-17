@@ -10,7 +10,7 @@
 #    888  888       `"Y88b.   888   888   888    .dP'           888'
 #    888  888   .o8 o.  )88b  888   888   888  .oP     .o     .88P'
 #   o888o `Y8bod8P' 8""888P' o888o o888o o888o 8888888888   .oP'
-def sum_of_intervals(intervals):
+def sum_of_intervals(intervals: list[tuple[int]]) -> int:
     return len(set([i for a, b in intervals for i in range(a, b)]))
 
 
