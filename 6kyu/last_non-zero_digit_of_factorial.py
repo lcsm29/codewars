@@ -10,7 +10,7 @@
 #    888  888       `"Y88b.   888   888   888    .dP'           888'
 #    888  888   .o8 o.  )88b  888   888   888  .oP     .o     .88P'
 #   o888o `Y8bod8P' 8""888P' o888o o888o o888o 8888888888   .oP'
-def last_digit(n):
+def last_digit(n: int) -> int:
     l, a, b, c = [1, 1, 2, 6, 4, 2, 2, 4, 2, 8], n // 5, n % 10, n // 10 % 2
     return l[n] if len(str(n)) == 1 else last_digit(a) * l[b] * 6 % 10 if c == 0 else last_digit(a) * l[b] * 4 % 10
 
