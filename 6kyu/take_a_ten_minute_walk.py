@@ -10,7 +10,7 @@
 #    888  888       `"Y88b.   888   888   888    .dP'           888'
 #    888  888   .o8 o.  )88b  888   888   888  .oP     .o     .88P'
 #   o888o `Y8bod8P' 8""888P' o888o o888o o888o 8888888888   .oP'
-def is_valid_walk(copied):
+def is_valid_walk(copied: list[str]) -> bool:
     def get_map(minutes: int) -> list:
         base_map = [[False for _ in range(21)] for _ in range(21)]
         for i in range(10 - minutes, 11):
