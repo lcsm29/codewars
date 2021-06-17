@@ -13,7 +13,7 @@
 from string import punctuation as p, ascii_lowercase as lo
 
 
-def alphabet_position(text):
+def alphabet_position(text: str) -> str:
     d = {c: i+1 for i, c in enumerate(lo)}
     return ' '.join([str(d[c.lower()]) for w in text.split() for c in w.strip(p) if c.encode().isalpha()])
 
