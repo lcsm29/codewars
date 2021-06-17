@@ -10,7 +10,14 @@
 #    888  888       `"Y88b.   888   888   888    .dP'           888'
 #    888  888   .o8 o.  )88b  888   888   888  .oP     .o     .88P'
 #   o888o `Y8bod8P' 8""888P' o888o o888o o888o 8888888888   .oP'
-def tree_by_levels(node):
+class Node:
+    def __init__(self, L, R, n) -> None:
+        self.left = L
+        self.right = R
+        self.value = n
+
+
+def tree_by_levels(node: Node) -> list[int]:
     if not node:
         return []
     else:
@@ -24,11 +31,6 @@ def tree_by_levels(node):
 
 
 if __name__ == '__main__':
-    class Node:
-        def __init__(self, L, R, n):
-            self.left = L
-            self.right = R
-            self.value = n
     basic_tests = [
         ['tree_by_levels', None, [], 'None'],
         ['tree_by_levels', Node(Node(None, Node(None, None, 4), 2), Node(Node(None, None, 5), Node(None, None, 6), 3), 1), [1, 2, 3, 4, 5, 6], 'Node(Node(None, Node(None, None, 4), 2), Node(Node(None, None, 5), Node(None, None, 6), 3), 1)']
