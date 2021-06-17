@@ -10,7 +10,7 @@
 #    888  888       `"Y88b.   888   888   888    .dP'           888'
 #    888  888   .o8 o.  )88b  888   888   888  .oP     .o     .88P'
 #   o888o `Y8bod8P' 8""888P' o888o o888o o888o 8888888888   .oP'
-def open_or_senior(data):
+def open_or_senior(data: list[tuple[int]]) -> list[str]:
     return ['Senior' if l[0] >= 55 and l[1] > 7 else 'Open' for l in data]
 
 
