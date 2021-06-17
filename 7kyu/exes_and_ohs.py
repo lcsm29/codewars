@@ -10,7 +10,7 @@
 #    888  888       `"Y88b.   888   888   888    .dP'           888'
 #    888  888   .o8 o.  )88b  888   888   888  .oP     .o     .88P'
 #   o888o `Y8bod8P' 8""888P' o888o o888o o888o 8888888888   .oP'
-def xo(s):
+def xo(s: str) -> bool:
     tmp = [c.lower() for c in s if c.lower() in 'x, o']
     return tmp.count('x') == tmp.count('o')
 
