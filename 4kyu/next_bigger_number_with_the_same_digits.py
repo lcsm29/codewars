@@ -10,7 +10,7 @@
 #    888  888       `"Y88b.   888   888   888    .dP'           888'
 #    888  888   .o8 o.  )88b  888   888   888  .oP     .o     .88P'
 #   o888o `Y8bod8P' 8""888P' o888o o888o o888o 8888888888   .oP'
-def next_bigger(n):
+def next_bigger(n: int) -> int:
     n = list(str(n))
     try:
         k = max(i for i in range(1, len(n)) if n[i - 1] < n[i])
