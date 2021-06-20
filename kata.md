@@ -11,6 +11,7 @@
   * [Sum of Intervals](#sum-of-intervals)
 - [5 kyu](#5-kyu)
   * [Largest product in a series](#largest-product-in-a-series)
+  * [Simple assembler interpreter](#simple-assembler-interpreter)
 - [6 kyu](#6-kyu)
   * [Counting Duplicates](#counting-duplicates)
   * [Even Fibonacci Sum](#even-fibonacci-sum)
@@ -267,6 +268,53 @@ greatestProduct("123834539327238239583")  # should return 3240
 The input string always has more than five digits.
 
 Adapted from [Project Euler](https://projecteuler.net/).
+
+## Simple assembler interpreter
+[kata](https://www.codewars.com/kata/58e24788e24ddee28e000053) | Solutions: [Python](https://github.com/lcsm29/codewars/blob/main/5kyu/simple_assembler_interpreter.py)
+
+This is the first part of this kata series. Second part is [here](https://www.codewars.com/kata/58e61f3d8ff24f774400002c).
+
+We want to create a simple interpreter of assembler which will support the following instructions:
+
+* `mov x y` - copies `y` (either a constant value or the content of a register) into register `x`
+* `inc x` - increases the content of the register `x` by one
+* `dec x` - decreases the content of the register `x` by one
+* `jnz x y` - jumps to an instruction `y` steps away (positive means forward, negative means backward, y can be a register or a constant), but only if `x` (a constant or a register) is not zero
+
+Register names are alphabetical (letters only). Constants are always integers (positive or negative).
+
+Note: the `jnz` instruction moves relative to itself. For example, an offset of `-1` would continue at the previous instruction, while an offset of `2` would skip over the next instruction.
+
+The function will take an input list with the sequence of the program instructions and will execute them. The program ends when there are no more instructions to execute, then it returns a dictionary with the contents of the registers.
+
+Also, every `inc`/`dec`/`jnz` on a register will always be preceeded by a `mov` on the register first, so you don't need to worry about uninitialized registers.
+
+### Example
+```
+simple_assembler(['mov a 5','inc a','dec a','dec a','jnz a -1','inc a'])
+
+''' visualized:
+mov a 5
+inc a
+dec a
+dec a
+jnz a -1
+inc a
+''''
+```
+The above code will:
+
+* set register `a` to `5`,
+* increase its value by `1`,
+* decrease its value by `2`,
+* then decrease its value until it is zero (`jnz a -1` jumps to the previous instruction if `a` is not zero)
+* and then increase its value by `1`, leaving register `a` at `1`
+* So, the function should return
+```
+{'a': 1}
+```
+This kata is based on the [Advent of Code 2016 - day 12](https://adventofcode.com/2016/day/12)
+
 
 # 6 kyu
 ## Counting Duplicates
