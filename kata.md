@@ -1,4 +1,6 @@
 # Table of Contents
+- [2 kyu](#2-kyu)
+  * [One Line Task: Circle Intersection](#one-line-task-circle-intersection)
 - [3 kyu](#3-kyu)
   * [Screen Locking Patterns](#screen-locking-patterns)
 - [4 kyu](#4-kyu)
@@ -30,8 +32,22 @@
 - [8 kyu](#8-kyu)
   * [Multiply](#multiply)
 
+# 2 kyu
+## One Line Task: Circle Intersection
+[kata](https://www.codewars.com/kata/5908242330e4f567e90000a3) | Solutions: [Python](https://github.com/lcsm29/codewars/blob/main/2kyu/one_line_task_circle_intersection.py)
+
+* **Task**
+Given two congruent circles a and b of radius r, return the area of their intersection rounded down to the nearest integer.
+
+* **Code Limit**
+  * Javascript: Less than 94 characters.
+  * Python: Less than 128 characters.
+
+* **Example**
+For `c1 = [0, 0]`, `c2 = [7, 0]` and `r = 5`, the output should be `14`.
+
 # 3 kyu
-## Screen Locking Pattern
+## Screen Locking Patterns
 [kata](https://www.codewars.com/kata/585894545a8a07255e0002f1) | Solutions: [Python](https://github.com/lcsm29/codewars/blob/main/3kyu/screen_locking_patterns.py)
 
 You might already be familiar with many smartphones that allow you to use a geometric pattern as a security measure. To unlock the device, you need to connect a sequence of dots/points in a grid by swiping your finger **without lifting** it as you trace the pattern through the screen.
